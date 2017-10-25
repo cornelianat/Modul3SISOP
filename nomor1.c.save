@@ -48,7 +48,7 @@ chdir(path);
 printf("Sistem Informasi\n1. Lihat Senjata\n2. Tambah Senjata\n");
 while(1){
 scanf("%s",command);
-if(strcmp(command,"lihat")==0) err=pthread_create(&(tid[0]),NULL,&tred,NULL);
+if(strcmp(command,"1")==0) err=pthread_create(&(tid[0]),NULL,&tred,NULL);
 else err=pthread_create(&(tid[1]),NULL,&tred,NULL);
 }
 pthread_join(tid[0],NULL);
