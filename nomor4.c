@@ -10,7 +10,7 @@ int simpan;
 int c=0;
 
 
-void *prime(void* end)
+void *faktorial(void* end)
 {
     printf("\n");
 
@@ -27,7 +27,7 @@ void *prime(void* end)
         {
             jawab=jawab*i;
         }
-        printf("%d = %d\n",temp,jawab);
+        printf("Hasil %d!=%d\n",temp,jawab);
 
     //printf ("awal is %d, simpan is %d", awal, simpan);
     //pthread_mutex_unlock(&lock);
@@ -43,7 +43,7 @@ int main (int argc, char *argv[]){
     {
         //scanf("%d",&simpan);
 	//printf("%s",argv[i+1]);
-        pthread_create(&(tid[i]),NULL,&prime,(void *)argv[i+1]);
+        pthread_create(&(tid[i]),NULL,&faktorial,(void *)argv[i+1]);
     }
 
     //s=simpan;
