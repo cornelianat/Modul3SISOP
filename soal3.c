@@ -23,7 +23,7 @@ void* loting(void *arg){
 	{
 		while(status[0]>=1 && status[1]>=1 && status[0]<=100 && status[1]<=100)
 		{
-			sleep(10);
+			sleep(1);
 			status[0]-=15;
 			status[1]-=10;
 		}
