@@ -16,13 +16,12 @@ void* cari(void* args){
 	printf("%s = %d\n", args,n);
 	return NULL;
 }
-
 int main(void){
 	int i=0;
 	char nama[100];
 	while(1){
 		scanf("%s",nama);
-		pthread_create(tid[i],NULL,&cari,(void*) nama);
+		pthread_create(&(tid[i]),NULL,&cari,(void*) nama);
 		pthread_join(tid[i],NULL);
 		i++;
 	}
